@@ -4,7 +4,6 @@ function PokemonCard({ pokemon }) {
     console.log(pokemon)
     return (
         <div>
-            <figcaption>Bulbasaur</figcaption>
             <figure>
                 <div>
                     <h2>{pokemon.name}</h2>

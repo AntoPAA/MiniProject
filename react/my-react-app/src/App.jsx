@@ -4,13 +4,27 @@ import "./App.css";
 import PokemonCard from "./components/PokemonCard";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [pokemonIndex, setpokemonIndex] = useState(0);
+  const handleClickPrecedent = () => {
+    if (pokemonIndex > 0) {
+      setpokemonIndex(pokemonIndex - 1)
+    }
+  }
+  const handleClickSuivant = () => {
+    if (pokemonIndex < pokemonList.length - 1) {
+      setpokemonIndex(pokemonIndex + 1)
+    }
+
+  }
   return (
     <div>
-      <PokemonCard pokemon={pokemonList[0]} />
+      <PokemonCard pokemon={pokemonList[pokemonIndex]} />
+      {pokemonIndex > 0 && <button onClick={handleClickPrecedent}>Précedent</button>} {pokemonIndex < pokemonList.length - 1 && <button onClick={handleClickSuivant}>Suivant</button>}
     </div>
   );
 }
+
+
 
 export default App;
 
@@ -21,6 +35,22 @@ const pokemonList = [
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
   },
   {
+    name: "charmander",
+    imgSrc:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png",
+  },
+  {
+    name: "squirtle",
+    imgSrc:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png",
+  },
+  {
+    name: "pikachu",
+    imgSrc:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
+  },
+  {
     name: "mew",
+    imgSrc: "https://media.gqmagazine.fr/photos/642fd954abd92836c899cf75/1:1/w_1079,h_1079,c_limit/therock.jpg",
   },
 ];
