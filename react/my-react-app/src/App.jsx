@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import { useState } from "react";
 import "./App.css";
 import PokemonCard from "./components/PokemonCard";
+import NavBar from "./components/NavBar";
 
 function App() {
   const [pokemonIndex, setpokemonIndex] = useState(0);
@@ -19,12 +20,14 @@ function App() {
   return (
     <div>
       <PokemonCard pokemon={pokemonList[pokemonIndex]} />
-      {pokemonIndex > 0 && <button onClick={handleClickPrecedent}>Précedent</button>} {pokemonIndex < pokemonList.length - 1 && <button onClick={handleClickSuivant}>Suivant</button>}
+      <NavBar pokemonIndex={pokemonIndex}
+        SuivantMax={pokemonList.length - 1}
+        handleClickPrecedent={handleClickPrecedent}
+        handleClickSuivant={handleClickSuivant} />
+
     </div>
   );
 }
-
-
 
 export default App;
 
