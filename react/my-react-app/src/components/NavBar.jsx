@@ -1,10 +1,16 @@
-function NavBar({ pokemonIndex, handleClickPrecedent, handleClickSuivant, SuivantMax }) {
+
+
+function NavBar({ pokemonList, setpokemonIndex }) {
     return (
         <div>
-            {pokemonIndex > 0 ? <button onClick={handleClickPrecedent}>Précedent</button> : null} {pokemonIndex < SuivantMax ? <button onClick={handleClickSuivant}>Suivant</button> : null}
+            {pokemonList.map((pokemon, index) => (
+                <button key={index} onClick={() => setpokemonIndex(index)}>
+                    {pokemon.name}
+                </button>
+            ))}
         </div>
     )
 
 }
-
 export default NavBar;
+

@@ -4,11 +4,11 @@ function PokemonCard({ pokemon }) {
     console.log(pokemon)
     return (
         <div>
-            <figure>
+            <figure className="card">
                 <div>
                     <h2>{pokemon.name}</h2>
                     {pokemon.imgSrc ? (
-                        <img src={pokemon.imgSrc} />
+                        <img src={pokemon.imgSrc} className="card-img" />
                     ) : (
                         <p>???</p>
                     )}
