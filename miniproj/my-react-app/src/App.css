@@ -1,36 +1,7 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  margin: 0;
+  padding: 4rem;
   text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
 }
 
 .card {
@@ -39,4 +10,74 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.allItem {
+  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6rem;
+}
+
+.button-category {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+
+
+.container-card {
+  width: 200px;
+  height: 300px;
+  margin-bottom: 10px;
+  background-color: white;
+  transition: all .40s;
+}
+
+.picture-header img {
+  width: 100%;
+}
+
+.card-name {
+  font-size: small;
+  color: black;
+}
+
+.card-price {
+  color: black;
+}
+
+
+
+.container-card:hover {
+  transform: scale(0.9);
+}
+
+.card-categorie {
+  color: black;
+}
+
+.button-all {
+  margin-right: 20px;
+}
+
+.button-spooky {
+  margin-right: 20px;
+}
+
+.button-funny {
+  margin-right: 20px;
+}
+
+.button-asc {
+  margin-left: 1000px;
+  margin-right: 20px;
+}
+
+.button-desc {
+  margin-right: 20px;
+}
+
+.button-creative {
+  margin-right: 20px;
 }
