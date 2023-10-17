@@ -1,8 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Fruktur&display=swap');
+
+* {
+  padding: 0;
+  box-sizing: border-box;
+}
+
 #root {
   margin: 0;
-  padding: 4rem;
   text-align: center;
 }
+
+/* nav bar  */
+
+.nave {
+  display: flex;
+  margin-left: 1550px;
+}
+
+.Home {
+  margin-top: 20px;
+  font-size: 45px;
+  color: white;
+  margin-right: 100px;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  font-family: 'Fruktur', cursive;
+}
+
+.Home:hover {
+  color: #f77700;
+  transition: 0.2s;
+  transform: translateY(-2px);
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+}
+
+.Product {
+  margin-top: 20px;
+  font-size: 45px;
+  color: white;
+  margin-right: 100px;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  font-family: 'Fruktur', cursive;
+}
+
+.Product:hover {
+  color: #f77700;
+  transition: 0.2s;
+  transform: translateY(-2px);
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+}
+
+.About:hover {
+  color: #f77700;
+  transition: 0.2s;
+  transform: translateY(-2px);
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+}
+
+.About {
+  margin-top: 20px;
+  font-size: 45px;
+  color: white;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  font-family: 'Fruktur', cursive;
+}
+
+.testjack {
+  display: flex;
+  margin-left: 30px;
+  font-size: 1.5rem;
+  font-family: 'Fruktur', cursive;
+}
+
+.O {
+  color: #ff9425;
+  font-family: 'Fruktur', cursive;
+}
+
+
+/* body  */
+
+
+body {
+  background-color: black;
+}
+
+#bg {
+  position: relative;
+  z-index: 0;
+  width: 2350px;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+}
+
+section::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #010405, transparent);
+  z-index: 100000;
+}
+
+.section img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  width: 100%;
+}
+
+.sec {
+  position: relative;
+  text-align: center;
+}
+
+.sec h2 {
+  display: flex;
+  justify-content: center;
+  font-size: 5em;
+  color: #ff9425;
+  font-family: 'Fruktur', cursive;
+}
+
+.shop {
+  font-size: 25px;
+  border: 4px solid #000000;
+  border-radius: 80px;
+  color: rgb(184, 0, 0);
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+}
+
+.main-text {
+  color: #00940c;
+}
+
+
+.shop:hover {
+  color: #f77700;
+  transition: 0.2s;
+  transform: translateY(-2px);
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+}
+
+.logosorciere {
+  position: absolute;
+  top: -350px;
+  left: -200px;
+  transform: rotate(15deg);
+}
+
+.main-text {
+  position: absolute;
+  z-index: 1;
+  margin-top: 450px;
+  margin-left: 190px;
+  transform: rotate(15deg);
+  font-family: 'Fruktur', cursive;
+}
+
+/* card & button */
+
+
 
 .card {
   padding: 2em;
@@ -19,23 +183,19 @@
   gap: 6rem;
 }
 
-.button-category {
-  display: flex;
-  margin-bottom: 30px;
-}
-
-
-
 .container-card {
+  margin-left: 6rem;
   width: 200px;
   height: 300px;
   margin-bottom: 10px;
   background-color: white;
   transition: all .40s;
+  font-style: italic;
 }
 
 .picture-header img {
   width: 100%;
+  height: 200px;
 }
 
 .card-name {
@@ -47,8 +207,6 @@
   color: black;
 }
 
-
-
 .container-card:hover {
   transform: scale(0.9);
 }
@@ -57,27 +215,105 @@
   color: black;
 }
 
-.button-all {
-  margin-right: 20px;
+.button-category {
+  display: flex;
+  margin-bottom: 30px;
 }
+
+.button-all {
+  margin-left: 100px;
+  margin-right: 20px;
+  font-style: italic;
+  background-color: #fc7100;
+  border-color: #000000;
+}
+
+button {
+  font-family: monospace;
+  background-color: #000000;
+  color: #030202;
+  border: none;
+  border-radius: 8px;
+  width: 100px;
+  height: 45px;
+  transition: .3s;
+}
+
+button:hover {
+  background-color: #fc7100;
+  box-shadow: 0 0 0 5px #572a005f;
+  color: #000000;
+}
+
 
 .button-spooky {
   margin-right: 20px;
+  font-style: italic;
+  background-color: #fc7100;
+  border-color: #000000;
 }
 
 .button-funny {
   margin-right: 20px;
+  font-style: italic;
+  background-color: #fc7100;
+  border-color: #000000;
 }
 
 .button-asc {
-  margin-left: 1000px;
   margin-right: 20px;
+  font-style: italic;
+  background-color: #fc7100;
+  border-color: #000000;
 }
 
 .button-desc {
-  margin-right: 20px;
+  right: 10px;
+  font-style: italic;
+  background-color: #fc7100;
+  border-color: #000000;
 }
 
 .button-creative {
   margin-right: 20px;
+  font-style: italic;
+  background-color: #fc7100;
+  border-color: #000000;
+}
+
+
+
+/* footer */
+
+.footerr {
+  display: flex;
+  align-items: center;
+  border-top: 4px solid #753e02;
+  margin-top: 80px;
+}
+
+.logogit {
+  height: 100px;
+  margin-left: 2050px;
+
+}
+
+.JackO {
+  font-size: 36px;
+  margin-left: 30px;
+  font-family: 'Fruktur', cursive;
+}
+
+.logogitt {
+  position: absolute;
+  height: 90px;
+  display: flex;
+  margin-left: 150px;
+  margin-bottom: 1000px;
+  transform: rotate(45deg);
+}
+
+.txr {
+  border-top: 4px solid #753e02;
+  font-family: 'Fruktur', cursive;
 }
